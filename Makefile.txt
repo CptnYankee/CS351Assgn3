@@ -1,0 +1,7 @@
+all:numarray
+numarray:numarray.o
+	gcc -o numarray numarray.o
+numarray.o:numarray.s
+	as -o first.o first.s
+clean:
+	rm -vf first *.0
